@@ -1,4 +1,4 @@
-NAME=$(notdir $(shell pwd))
+NAME=cypress-realworld-app
 GIT_TAG=$(shell (git describe --tags 2>/dev/null || echo ""))
 CLONE_TAG=$(if $(GIT_TAG),$(GIT_TAG),develop)
 DOCKER_TAG=$(if $(GIT_TAG),$(GIT_TAG),latest)
@@ -14,3 +14,4 @@ all: Makefile Dockerfile cypress-realworld-app
 cypress-realworld-app:
 	git clone git@github.com:cypress-io/$@.git
 	cd $@ && git checkout $(CLONE_TAG)
+
