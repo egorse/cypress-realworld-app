@@ -7,6 +7,8 @@ Then login to http://localhost:3000
 
 Please see more details at https://github.com/cypress-io/cypress-realworld-app
 
+Build from https://github.com/egorse/cypress-realworld-app
+
 ## Ready made logins
 
 All logins has password `s3cret`

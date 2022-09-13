@@ -16,6 +16,8 @@ jobs:
           version: 20.10.14    
       - checkout
       - run: make
+      - run: docker login --username "$DOCKERHUB_USERNAME" --password "$DOCKERHUB_PASSWORD"
+      - run: make publish
       - run: echo "Done!"
 
 workflows:
