@@ -12,7 +12,7 @@ all: Makefile Dockerfile cypress-realworld-app
 	docker build . --tag $(NAME):$(DOCKER_TAG)
 
 cypress-realworld-app:
-	git clone git@github.com:cypress-io/$@.git
+	git clone https://github.com/cypress-io/$@.git
 	cd $@ && git checkout $(CLONE_TAG)
 
 .PHONY: publish
